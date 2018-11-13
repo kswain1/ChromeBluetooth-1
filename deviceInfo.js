@@ -4,7 +4,7 @@ function deviceInfo_connect() {
         ({
             acceptAllDevices: true
             filters: [{
-                services: ['b42f7e37-b0ab-d1a3-1f76-2137c7b15671']
+                services: ['0x180F','b42f7e37-b0ab-d1a3-1f76-2137c7b15671']
          }]
         })
         .then(device => {
