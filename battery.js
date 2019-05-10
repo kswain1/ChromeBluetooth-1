@@ -1,11 +1,12 @@
 function battery_connect() {
 
     let serviceUuid = "battery_service";
+    let dynofitBatteryService = "d6b9eb0d-9382-4147-8737-f241ae9fd366";
     let characteristicUuid = "battery_level"
 
     navigator.bluetooth.requestDevice
         ({
-            filters: [{ services: [serviceUuid] }]
+            filters: [{ services: [serviceUuid, dynofitBatteryService] }]
             , optionalServices: [serviceUuid]
         })
         .then(device => { return device.gatt.connect(); })
